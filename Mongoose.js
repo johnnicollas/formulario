@@ -6,7 +6,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/nomeDoBancoDeDados').then(function (
     console.log("Houve um erro ao se conectar ao MongoB: " + erro)
 })
 
-// Definição do Schema
 const usuarioSchema = mongoose.Schema({
     nome: {
         type: String,
@@ -29,10 +28,8 @@ const usuarioSchema = mongoose.Schema({
     }
 })
 
-// Registro do Model
 mongoose.model("usuarios", usuarioSchema)
 
-// Inserção de dados
 let novoUsuario = mongoose.model("usuarios")
 
 new novoUsuario({
@@ -46,4 +43,3 @@ new novoUsuario({
 }).catch(function (erro) {
     console.log("Erro ao inserir um novo usuario: " + erro)
 })
-
