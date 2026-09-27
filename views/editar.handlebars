@@ -1,0 +1,16 @@
+<h1>Editar Postagem</h1>
+
+<form action="/update" method="post">
+  <input type="hidden" name="id" value="{{post.id}}">
+
+  <p>Titulo:</p>
+  <input type="text" name="titulo" value="{{post.titulo}}">
+
+  <p>Conteudo:</p>
+  <textarea name="conteudo">{{post.conteudo}}</textarea>
+
+  <br><br>
+  <button type="submit">Salvar Alterações</button>
+</form>
+<hr>
+<a href="/"><button>Cancelar</button></a>

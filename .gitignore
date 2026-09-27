@@ -1,0 +1,7 @@
+node_modules/
+database.sqlite
+*.rar
+.env
+.env.*
+!.env.example
+npm-debug.log*

@@ -1,0 +1,31 @@
+{{!--
+Este é o arquivo de formulário (views/formulario.handlebars).
+O formulário HTML envia dados preenchidos pelo usuário diretamente para o nosso servidor Node.js.
+--}}
+
+{{!--
+<form action="/add" method="post">:
+  - action="/add": Diz para qual endereço/rota do servidor as informações devem ser enviadas.
+  - method="post": Método seguro usado para enviar dados ao servidor para serem criados/salvos.
+  --}}
+  <form action="/add" method="post">
+    <p>Titulo:</p>
+    {{!--
+    O atributo name="titulo" é FUNDAMENTAL:
+    Ele é o nome pelo qual o servidor vai capturar este campo via req.body.titulo
+    --}}
+    <input type="text" name="titulo">
+
+    <p>Conteudo:</p>
+    {{!--
+    O atributo name="conteudo" permite que o servidor capture este texto longo via req.body.conteudo
+    --}}
+    <textarea name="conteudo"></textarea>
+
+    {{!--
+    O botão com type="submit" aciona o envio de todos os dados do formulário quando clicado.
+    --}}
+    <button type="submit">Cadastrar Postagem</button>
+  </form>
+  <hr>
+  <a href="/"><button>Ver postagens</button></a>

@@ -1,0 +1,10 @@
+<h1>Lista de post: </h1>
+
+{{#each posts}}
+<h1>{{titulo}}</h1>
+<p>{{conteudo}}</p>
+<a href="/excluir/{{id}}"><button>Excluir</button></a>
+<a href="/editar/{{id}}"><button>Editar</button></a>
+<hr>
+{{/each}}
+<a href="/formulario"><button>Cadastrar</button></a>
